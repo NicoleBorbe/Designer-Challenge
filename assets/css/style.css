@@ -52,11 +52,26 @@ h1 {
 }
 header {
     height: 100vh;
-    background-image: url(../img/ilustracion_people.png), url(../img/ilustracion1.png);
+    background-image: url(../img/ilustracion1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 95vh;
+}
+header div img {
+    position: absolute;
+    height: 70%;
+	left: 50vw;
+	top: 1vh;
+	animation: move 1s linear alternate infinite;
+}
+@keyframes move {
+	0% {
+		transform: translateY(-20px);
+	}
+	100% {
+		transform: translateY(20px);
+	}
 }
 header h2 {
     font-weight: 700;
@@ -334,5 +349,42 @@ button {
     margin-bottom: 10rem;
 }
 button:hover {
+    background-image: linear-gradient(to right, #ff3571, #3C30FF);
+}
+
+footer article  {
+    box-shadow: 0.5px 0.5px 15px 0.5px #dddddd;
+    padding: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 25rem 5rem 25rem;
+
+}
+footer article p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0;
+}
+footer h6 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+article .button {
+    background-color: #3C30FF;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    grid-row: 5/6;
+}
+article .button:hover {
     background-image: linear-gradient(to right, #ff3571, #3C30FF);
 }
